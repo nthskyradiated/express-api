@@ -21,3 +21,4 @@ spec:
           image: nthskyradiated/argo-express-api:v1.2
           ports:
             - containerPort: 8080
+  revisionHistoryLimit: 5
