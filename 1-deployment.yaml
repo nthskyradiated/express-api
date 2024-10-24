@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: argo-express-api
-          image: nthskyradiated/argo-express-api:v1.0
+          image: nthskyradiated/argo-express-api:v1.1
           ports:
             - containerPort: 8080
