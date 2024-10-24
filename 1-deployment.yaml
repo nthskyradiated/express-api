@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-api
+  namespace: staging
+  labels:
+    app: express-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-api
+  template:
+    metadata:
+      labels:
+        app: express-api
+    spec:
+      containers:
+        - name: express-api
+          image: nthskyradiated/express-ts-api:v1.0
+          ports:
+            - containerPort: 8080
