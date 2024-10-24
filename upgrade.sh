@@ -8,7 +8,7 @@ new_ver=$1
 echo "new version: $new_ver"
 
 # Simulate release of the new docker images
-docker tag nthskyradiated/v1.0 nthskyradiated/express-ts-api:$new_ver
+docker tag nthskyradiated/argo-express-api:v1.0 nthskyradiated/express-ts-api:$new_ver
 
 # Push new version to dockerhub
 docker push nthskyradiated/express-ts-api:$new_ver
@@ -21,7 +21,7 @@ echo $tmp_dir
 git clone https://github.com/nthskyradiated/express-api.git $tmp_dir
 
 # Update image tag
-sed -i '' -e "s/nthskyradiated\/express-ts-api:.*/nthskyradiated\/express-ts-api:$new_ver/g" $tmp_dir/my-app/1-deployment.yaml
+sed -i '' -e "s/nthskyradiated\/argo-express-api:.*/nthskyradiated\/argo-express-api:$new_ver/g" $tmp_dir/1-deployment.yaml
 
 # Commit and push
 cd $tmp_dir
