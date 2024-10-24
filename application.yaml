@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: express-api
+  name: argo-express-api
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -14,13 +14,13 @@ spec:
     path: .
   destination:
     server: https://kubernetes.default.svc
-  # syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
-  #     allowEmpty: false
-  #   syncOptions:
-  #     - Validate=true
-  #     - CreateNamespace=false
-  #     - PrunePropagationPolicy=foreground
-  #     - PruneLast=true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=false
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
