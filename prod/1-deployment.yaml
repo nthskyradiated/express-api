@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-express-api
+  namespace: staging
+  labels:
+    app: argo-express-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argo-express-api
+  template:
+    metadata:
+      labels:
+        app: argo-express-api
+    spec:
+      containers:
+        - name: argo-express-api
+          image: nthskyradiated/argo-express-api:v1.1
+          ports:
+            - containerPort: 8080
+  revisionHistoryLimit: 5
