@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: argo-express-api
-          image: nthskyradiated/argo-express-api:v1.1
+          image: nthskyradiated/express-ts-api:v1.1
           ports:
             - containerPort: 8080
-  revisionHistoryLimit: 5
+  revisionHistoryLimit: 2
