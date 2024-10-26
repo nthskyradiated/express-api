@@ -121,10 +121,10 @@ spec:
       volumes:
       - name: mongodb-keyfile
         persistentVolumeClaim:
-          claimName: mongodb-keyfile-pvc
+          claimName: mongodb-keyfile-pvc-dev
       - name: mongodb-storage
         persistentVolumeClaim:
-          claimName: mongodb-storage-pvc
+          claimName: mongodb-storage-pvc-dev
 ---
 apiVersion: v1
 kind: PersistentVolume
