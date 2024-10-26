@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongo-storage-pv-dev
+  name: mongodb-pv-staging
   namespace: staging
 spec:
   capacity:
@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-storage-pvc-dev
+  name: mongodb-pvc-staging
   namespace: staging
 spec:
   accessModes:
@@ -129,7 +129,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-keyfile-pv-dev
+  name: mongodb-keyfile-pv-staging
   namespace: staging
 spec:
   capacity:
@@ -144,7 +144,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-keyfile-pvc-dev
+  name: mongodb-keyfile-pvc-staging
   namespace: staging
 spec:
   accessModes:
@@ -156,7 +156,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-service
+  name: mongodb-service-staging
   namespace: staging
 spec:
   clusterIP: None # This makes it a headless service
