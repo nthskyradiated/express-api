@@ -2,6 +2,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: mongo-storage-pv
+  namespace: prod
 spec:
   capacity:
     storage: 50Mi
@@ -16,6 +17,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongodb-storage-pvc
+  namespace: prod
 spec:
   accessModes:
     - ReadWriteMany
