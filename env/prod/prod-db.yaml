@@ -21,16 +21,16 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 100Mi
+      storage: 200Mi
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
-  namespace: staging
+  namespace: prod
 spec:
   serviceName: "mongodb-service"
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: mongodb
