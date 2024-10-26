@@ -4,12 +4,12 @@ metadata:
   name: mongo-storage-pv
 spec:
   capacity:
-    storage: 100Mi
+    storage: 50Mi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    path: /srv/nfs/kubedata/
+    path: /srv/nfs/kubedata-dev/
     server: 192.168.1.210
 ---
 apiVersion: v1

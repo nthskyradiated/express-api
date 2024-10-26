@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argo-express-api
+  name: argo-express-staging
   namespace: staging
   labels:
-    app: argo-express-api
+    app: argo-express-staging
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: argo-express-api
+      app: argo-express-staging
   template:
     metadata:
       labels:
-        app: argo-express-api
+        app: argo-express-staging
     spec:
       containers:
         - name: argo-express-api

@@ -4,7 +4,7 @@ metadata:
   name: mongo-storage-pv
 spec:
   capacity:
-    storage: 100Mi
+    storage: 50Mi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
@@ -21,7 +21,7 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 200Mi
+      storage: 20Mi
 ---
 apiVersion: apps/v1
 kind: StatefulSet
