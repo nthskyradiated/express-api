@@ -153,7 +153,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
-  namespace: default
+  namespace: staging
 spec:
   clusterIP: None # This makes it a headless service
   selector:
