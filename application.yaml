@@ -22,5 +22,5 @@ spec:
     syncOptions:
       - Validate=true
       - CreateNamespace=false
-      - PrunePropagationPolicy=foreground
+#      - PrunePropagationPolicy=foreground
       - PruneLast=true
