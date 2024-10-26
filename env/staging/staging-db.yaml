@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongo-storage-pv
+  name: mongo-storage-pv-dev
   namespace: staging
 spec:
   capacity:
@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-storage-pvc
+  name: mongodb-storage-pvc-dev
   namespace: staging
 spec:
   accessModes:
@@ -129,7 +129,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-keyfile-pv
+  name: mongodb-keyfile-pv-dev
+  namespace: staging
 spec:
   capacity:
     storage: 1Mi
@@ -143,7 +144,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-keyfile-pvc
+  name: mongodb-keyfile-pvc-dev
   namespace: staging
 spec:
   accessModes:
